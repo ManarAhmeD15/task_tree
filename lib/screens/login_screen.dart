@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:task_tree/screens/accounts_screen.dart';
 
 class Login extends StatelessWidget {
 
@@ -42,7 +43,7 @@ class Login extends StatelessWidget {
                             )),
                       ],
                     ),
-                    Icon(CupertinoIcons.xmark),
+                    Icon(CupertinoIcons.xmark,size: 26),
 
 
                   ],
@@ -80,7 +81,7 @@ class Login extends StatelessWidget {
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15),
-                            borderSide: BorderSide(color: Colors.grey,width: 2
+                            borderSide: BorderSide(color: Colors.black12,width: 2
                         ),
                         ),
                         focusedBorder: OutlineInputBorder(
@@ -121,7 +122,7 @@ class Login extends StatelessWidget {
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
-                          borderSide: BorderSide(color: Colors.grey,width: 2
+                          borderSide: BorderSide(color: Colors.black12,width: 2
                           ),
                         ),
                         focusedBorder: OutlineInputBorder(
@@ -173,7 +174,9 @@ class Login extends StatelessWidget {
                   child: SizedBox(
                     width: double.infinity,
                     height: 60,
-                    child: MaterialButton(onPressed: (){},
+                    child: MaterialButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Accounts()));
+                    },
                       child: Text('Login',
                         style: TextStyle(
                           fontSize: 26,
